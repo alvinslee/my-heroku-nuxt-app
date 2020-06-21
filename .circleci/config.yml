@@ -1,4 +1,6 @@
 version: 2.1
+orbs:
+  heroku: circleci/heroku@1.0.0
 jobs:
   run-test-suite:
     docker:
@@ -23,9 +25,7 @@ jobs:
     steps:
       - attach_workspace:
           at: ~/project
-      - run:
-          name: echo
-          command: echo 'HELLO WORLD'
+      - heroku/deploy-via-git
 workflows:
   test-and-deploy:
     jobs:
