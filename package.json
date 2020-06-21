@@ -7,8 +7,7 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "test": "jest --coverage false",
-    "heroku-postbuild": "yarn build"
+    "test": "jest --coverage false"
   },
   "dependencies": {
     "nuxt": "^2.13.0"
